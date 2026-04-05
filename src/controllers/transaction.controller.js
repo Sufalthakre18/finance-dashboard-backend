@@ -1,5 +1,5 @@
-import Transaction from "../models/Transaction";
-import { validate } from "../utils/validate";
+import Transaction from "../models/Transaction.js";
+import validate  from "../utils/validate.js";
 
 
 export const getAllTransactions = async (req, res, next) => {

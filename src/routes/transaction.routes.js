@@ -1,8 +1,8 @@
 import express from "express"
-import { protect } from "../middleware/auth";
-import { authorize } from "../middleware/roleCheck";
-import { createTransactionValidator, updateTransactionValidator } from "../validators/validators";
-import { createTransaction, deleteTransaction, getAllTransactions, getTransactionById, updateTransaction } from "../controllers/transaction.controller";
+import { protect } from "../middleware/auth.js";
+import { authorize } from "../middleware/roleCheck.js";
+import { createTransactionValidator, updateTransactionValidator } from "../validators/validators.js";
+import { createTransaction, deleteTransaction, getAllTransactions, getTransactionById, updateTransaction } from "../controllers/transaction.controller.js";
 
 
 const router = express.Router();

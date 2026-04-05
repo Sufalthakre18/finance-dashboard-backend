@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken'
-import User from '../models/User';
-import { validate } from '../utils/validate';
+import User from '../models/User.js';
 
 
 const generateToken = (id) => {
@@ -12,7 +11,7 @@ const generateToken = (id) => {
 
 const register = async (req, res, next) => {
   try {
-    if (!validate(req, res)) return;
+    
 
     const { name, email, password, role } = req.body;
 
@@ -42,7 +41,7 @@ const register = async (req, res, next) => {
 
 const login = async (req, res, next) => {
   try {
-    if (!validate(req, res)) return;
+    
 
     const { email, password } = req.body;
 
