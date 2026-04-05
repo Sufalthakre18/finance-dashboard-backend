@@ -5,6 +5,7 @@ import cors from 'cors'
 import { connectDB } from "./config/db.js";
 
 import authRoutes from './routes/auth.routes.js';
+import transactionRoutes from './routes/auth.routes.js';
 import { errorHandler } from "./middleware/errorHandler.js";
 
 connectDB();
@@ -16,6 +17,7 @@ app.use(express.json());
 
 
 app.use("/api/auth", authRoutes);
+app.use("/api/transactions", transactionRoutes);
 app.get("/", (req, res) => {
     res.json({
         success: true,
